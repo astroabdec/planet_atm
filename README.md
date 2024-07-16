@@ -39,12 +39,10 @@
 ##### ◦ 在esorex_exec下面新添一行：aer_version: 3.8.1.2
 ### PySME：生成恒星模型光谱和强度谱，用于模拟CLV+RM效应
 #### • SLOPpy在正向模拟CLV+RM效应时，需要提前提供盘积分的恒星模型流量谱和有出射方向依赖的强度谱文件，可由PySME生成
-#### • 安装网站可参见
-##### ◦ https://github.com/MingjieJian/SME
+#### • 安装网站可参见 ◦ https://github.com/MingjieJian/SME
 #### • 建议单独建立conda环境采用git clone模式进行安装，目前的python版本要求为3.7-3.11
 #### • Macbook Pro非intel芯片安装后，使用时可能会遇到架构问题而无法使用，可以尝试使用Rosetta来解决
-#### • 使用PySME时需要提前准备线表，可使用VALD3线表，需提前注册账号：
-##### ◦ http://vald.astro.uu.se/~vald/php/vald.php
+#### • 使用PySME时需要提前准备线表，可使用VALD3线表，需提前注册账号：◦ http://vald.astro.uu.se/~vald/php/vald.php
 
 
 
