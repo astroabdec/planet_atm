@@ -11,8 +11,9 @@
 #### • 以2017-8-16为例，在该网页“Name resolver”处输入KELT-20后点击Resolve，在“Observation date”处输入2017-08-16和2017-08-18，在“Instrum”处选择HARPN，点击Search，待结果列表出现后，点击Download选取URL list进行下载。
 #####  该list里需要下载的文件有三种，分别是文件名含e2ds、s1d、ccf的文件，可以使用wget进行下载
 #####  下载完成后，打开任一e2ds的文件头文件，查看该夜观测对应的blaze文件是什么，然后补足网址后用wget下载，同样，将blaze替换为lamp后也用wget下载
-###### `fold any-e2ds-file | grep BLAZE
-######  wget http://archives.ia2.inaf.it/files/tng/your-blaze-file.gz`
+###### `bash
+        fold any-e2ds-file | grep BLAZE
+        wget http://archives.ia2.inaf.it/files/tng/your-blaze-file.gz`
 ## 软件准备
 ### SLOPpy：数据处理分析与透射谱生成
 #### • github网站：https://github.com/LucaMalavolta/SLOPpy/tree/main
