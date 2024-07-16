@@ -20,7 +20,7 @@
 #### • Documentation网站：https://sloppy.readthedocs.io/en/latest/
 #### • 截止ABDEC2024，建议按Documentation网站上给出的流程，新建conda环境，然后以git clone的方式进行安装
 ##### ◦ 需要使用
-                `bash 
+##### `bash 
                 pip install -r extra_requirements.txt
 ##### 将额外的依赖安装完成
 ##### ◦ 若未进行依赖安装，在软件运行过程中，可能在调用scikit-learn、PyDE时报错，在报错时补充安装可继续进行后续步骤
