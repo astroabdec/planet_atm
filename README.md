@@ -33,9 +33,10 @@
 ##### ◦ Mac OS安装时推荐使用MacPorts进行安装，在上方的ESO网站有安装说明的介绍页面
 #### • 此外也有独立于ESO软件的老版本，最高版本号为1.5.9，其安装可能有一定的操作系统版本依赖性问题
 ##### ◦ Mac OS下的安装可以参考IAC的这个网页： ▪ https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=Tutorials.MolecfitDocker
-#### • 在SLOPpy中，老版的独立版本molecfit的相关模块带有v1标签，但如果安装的是新版的集成版本molecfit，则需要在SLOPpy的yaml配置文件中做如下修改：
+#### • 在SLOPpy中，老版的独立版本molecfit的相关模块带有v1标签，但如果安装的是新版的集成版本molecfit，则需要在SLOPpy某个example中的yaml配置文件中做如下修改：
 ##### ◦ 去掉_v1
-##### ◦ 在molecfit一节，将installation_path: /Applications/molecfit/bin/替换为esorex_exec: esorex
+##### ◦ 在molecfit一节，将installation_path: /Applications/molecfit/bin更改为installation_path: /opt/local/bin/
+##### ◦ 在installation_path 下面新添一行：esorex_exec: esorex
 ##### ◦ 在esorex_exec下面新添一行：aer_version: 3.8.1.2
 ### PySME：生成恒星模型光谱和强度谱，用于模拟CLV+RM效应
 #### • SLOPpy在正向模拟CLV+RM效应时，需要提前提供盘积分的恒星模型流量谱和有出射方向依赖的强度谱文件，可由PySME生成
