@@ -12,7 +12,7 @@
 #####  该list里需要下载的文件有三种，分别是文件名含e2ds、s1d、ccf的文件，可以使用wget进行下载
 #####  下载完成后，打开任一e2ds的文件头文件，查看该夜观测对应的blaze文件是什么，然后补足网址后用wget下载，同样，将blaze替换为lamp后也用wget下载
 ###### `fold any-e2ds-file | grep BLAZE
-######   wget http://archives.ia2.inaf.it/files/tng/your-blaze-file.gz`
+######  wget http://archives.ia2.inaf.it/files/tng/your-blaze-file.gz`
 ## 软件准备
 ### SLOPpy：数据处理分析与透射谱生成
 #### • github网站：https://github.com/LucaMalavolta/SLOPpy/tree/main
@@ -24,13 +24,11 @@
 ### Molecfit：地球大气改正
 #### • SLOPpy提供了多种地球大气改正的方法，其中一种是采用molecifit对光谱数据进行拟合并加以改正，软件运行时预先生成molecfit所需的配置文件，然后调用molecfit运行，因此需要提前安装molecfit
 ##### ◦ 注意，安装完molecfit，也可单独使用molecfit，而不是必须使用SLOPpy调用
-#### • 安装网站可参见
-##### ◦ https://www.eso.org/sci/software/pipelines/molecfit/molecfit-pipe-recipes.html
+#### • 安装网站可参见 ◦ https://www.eso.org/sci/software/pipelines/molecfit/molecfit-pipe-recipes.html
 #### • 新版Molecfit已集成到ESO软件中，截止ABDEC2024的最新版本为4.3.3
 ##### ◦ Mac OS安装时推荐使用MacPorts进行安装，在上方的ESO网站有安装说明的介绍页面
 #### • 此外也有独立于ESO软件的老版本，最高版本号为1.5.9，其安装可能有一定的操作系统版本依赖性问题
-##### ◦ Mac OS下的安装可以参考IAC的这个网页：
-###### ▪ https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=Tutorials.MolecfitDocker
+##### ◦ Mac OS下的安装可以参考IAC的这个网页： ▪ https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=Tutorials.MolecfitDocker
 #### • 在SLOPpy中，老版的独立版本molecfit的相关模块带有v1标签，但如果安装的是新版的集成版本molecfit，则需要在SLOPpy的yaml配置文件中做如下修改：
 ##### ◦ 去掉_v1
 ##### ◦ 在molecfit一节，将installation_path: /Applications/molecfit/bin/替换为esorex_exec: esorex
